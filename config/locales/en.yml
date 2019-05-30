@@ -45,11 +45,16 @@ en:
   name: "Name"
   email: "Email"
   password: "Password"
+  form:
+    create: "Sign me up!"
+  title:
+    signup: "Sign up"
   log_in: "Log in"
   log_out: "Log out"
   sign_up: "Sign up now"
   author: "Michael Hart"
   sample_app: "Sample App"
+  submmit: "Create my account"
   footer_text_html: "The %{main_href} by %{author_href}"
   url:
     main_page: "https://www.railstutorial.org/"
@@ -58,3 +63,4 @@ en:
     contact_page: "https://www.railstutorial.org/contact"
     book_page: "https://www.railstutorial.org/book"
     author: "http://www.michaelhartl.com/"
+
