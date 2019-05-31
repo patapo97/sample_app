@@ -49,7 +49,10 @@ en:
     create: "Sign me up!"
   title:
     signup: "Sign up"
-  log_in: "Log in"
+  label:
+    login: "Log in"
+    signupnow: "Sign up now"
+  log_in: "Login"
   log_out: "Log out"
   sign_up: "Sign up now"
   author: "Michael Hart"
