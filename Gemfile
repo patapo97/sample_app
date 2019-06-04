@@ -43,7 +43,12 @@ group :test do
 end
 
 group :production do
+<<<<<<< HEAD
   gem "fog"
+=======
+  gem "fog", "1.42"
+  gem "pg", "0.20.0"
+>>>>>>> Chapter 13: User microposts
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

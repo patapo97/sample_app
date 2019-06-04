@@ -1,17 +1,22 @@
-checked: "1"
-per_page: 30
-default_from_email: "giomay321@gmail.com"
-address: "smtp.gmail.com"
-port: 587
-domain: "gmail.com"
-authentication: "plain"
-enable_auto: true
-password_expire_time: 2
-user:
-  name_length: 50
-  email_length: 255
-  pass_length: 6
-  size_ava: 80
-  size_ava_sm: 50
-micropost:
-  length_max: 140
+Rails.application.routes.draw do
+  root "static_pages#home"
+
+  get "users/new"
+  get "password_resets/new"
+  get "password_resets/edit"
+  get "/help", to: "static_pages#help"
+  get "/about", to: "static_pages#about"
+  get "/contact", to: "static_pages#contact"
+  get "/signup", to: "users#new"
+  post "/signup", to: "users#create"
+
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
+
+  resources :users
+  resources :account_activations, only: :edit
+  resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :microposts, only: [:create, :destroy]
+end
+
